@@ -5,9 +5,8 @@ import SpeechRecognition, {
 import "./index.css";
 // import background from './background.svg'
 
-
 function App() {
-  const [text, setText] = useState('')
+  const [text, setText] = useState("");
   const { transcript, resetTranscript } = useSpeechRecognition();
   const [isListening, setIsListening] = useState(false);
   const microphoneRef = useRef(null);
@@ -41,13 +40,19 @@ function App() {
 
   return (
     <div className="microphone-wrapper">
+      <div className="title">
+        <h1>Takenote📝</h1>
+      </div>
       <div className="mircophone-container">
         <div
           className="microphone-icon-container"
           ref={microphoneRef}
           onClick={handleListing}
         >
-          <img src="https://img.icons8.com/color-glass/48/000000/microphone.png" alt="mic"/>
+          <img
+            src="https://img.icons8.com/color-glass/48/000000/microphone.png"
+            alt="mic"
+          />
         </div>
         <div className="microphone-status">
           {isListening ? "Listening........." : "Click and say anything"}
@@ -58,9 +63,15 @@ function App() {
           </button>
         )}
       </div>
-      {(
+      {
         <div className="microphone-result-container">
-          <textarea cols="30" rows="10" spellCheck="false" value={transcript || text}  onChange={e => setText(e.target.value)}/>
+          <textarea
+            cols="30"
+            rows="10"
+            spellCheck="false"
+            value={transcript || text}
+            onChange={(e) => setText(e.target.value)}
+          />
           <button className="microphone-reset btn" onClick={handleEdit}>
             Edit
           </button>
@@ -68,7 +79,7 @@ function App() {
             clear
           </button> */}
         </div>
-      )}
+      }
     </div>
   );
 }
