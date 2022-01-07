@@ -67,7 +67,7 @@ function App() {
         <div className="microphone-result-container">
           <textarea
             cols="30"
-            rows="10"
+            rows="20"
             placeholder="Type something"
             spellCheck="false"
             value={transcript || text}
