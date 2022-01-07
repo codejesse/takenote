@@ -76,9 +76,6 @@ function App() {
           <button className="microphone-reset btn" onClick={handleEdit}>
             Edit
           </button>
-          {/* <button className="microphone-reset btn" onClick={handleClear}>
-            clear
-          </button> */}
         </div>
       }
     </div>
