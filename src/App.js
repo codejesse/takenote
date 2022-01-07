@@ -68,7 +68,7 @@ function App() {
           <textarea
             cols="30"
             rows="10"
-            placeholder="Type something"
+            placeholder="Type something nice"
             spellCheck="false"
             value={transcript || text}
             onChange={(e) => setText(e.target.value)}
