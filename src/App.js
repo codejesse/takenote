@@ -13,7 +13,7 @@ function App() {
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     return (
       <div className="mircophone-container">
-        Browser is not Support Speech Recognition.
+        Sorry your Browser does not Support Speech Recognition.
       </div>
     );
   }
@@ -68,6 +68,7 @@ function App() {
           <textarea
             cols="30"
             rows="10"
+            placeholder="Type something"
             spellCheck="false"
             value={transcript || text}
             onChange={(e) => setText(e.target.value)}
