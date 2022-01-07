@@ -74,7 +74,7 @@ function App() {
             onChange={(e) => setText(e.target.value)}
           />
           <button className="microphone-reset btn" onClick={handleEdit}>
-            Edit text
+            Edit data
           </button>
         </div>
       }
