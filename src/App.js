@@ -55,7 +55,7 @@ function App() {
           />
         </div>
         <div className="microphone-status">
-          {isListening ? "Listening........." : "Click and say anything"}
+          {isListening ? "Listening........" : "Click and say anything"}
         </div>
         {isListening && (
           <button className="microphone-stop btn" onClick={stopHandle}>
